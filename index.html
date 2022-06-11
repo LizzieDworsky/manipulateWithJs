@@ -98,6 +98,30 @@
         </ul>
 
         <button>Change city</button>
-        <p>Coded by Matt Delac</p>
+        <p>Coded by Amy Dworsky</p>
+        <script>
+            function changeHeading(newHeading) {
+                let heading = document.querySelector("h1");
+                heading.innerHTML = newHeading;
+            }
+
+            function positiveNegativeTemps(currentTemp) {
+                if (currentTemp >= 0) {
+                    return true;
+                }
+            }
+
+            function changeCityTemp() {
+                userCity = prompt("What city do you live in?");
+                currentTemp = prompt("What is the current tempurature?");
+                if (positiveNegativeTemps(currentTemp)) {
+                    changeHeading(`😄`);
+                } else {
+                    changeHeading(`☹️`);
+                }
+            }
+            let changeCity = document.querySelector("button");
+            changeCity.addEventListener("click", changeCityTemp);
+        </script>
     </body>
 </html>
