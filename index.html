@@ -115,9 +115,13 @@
                 userCity = prompt("What city do you live in?");
                 currentTemp = prompt("What is the current tempurature?");
                 if (positiveNegativeTemps(currentTemp)) {
-                    changeHeading(`😄`);
+                    changeHeading(
+                        `😄<br />Currently ${currentTemp}°C in ${userCity}`
+                    );
                 } else {
-                    changeHeading(`☹️`);
+                    changeHeading(
+                        `☹️<br />Currently ${currentTemp}°C in ${userCity}`
+                    );
                 }
             }
             let changeCity = document.querySelector("button");
